@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  docentedb:
+    image: postgres
+
+  distributedcache:
+    image: redis
+
+volumes:
+  postgres_docente:

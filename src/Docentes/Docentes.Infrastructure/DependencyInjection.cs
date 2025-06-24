@@ -24,7 +24,7 @@ public static class DependencyInjection
         ?? throw new ArgumentNullException(nameof(configuration));
 
         var usuarioApiBaseUrl = configuration["UsuarioApiBaseUrl"];
-        var cursoApiBaseUrl = configuration["cursoApiBaseUrl"];
+        var cursoApiBaseUrl = configuration["CursosApiBaseUrl"];
 
     
         services.AddDbContext<ApplicationDbContext>(

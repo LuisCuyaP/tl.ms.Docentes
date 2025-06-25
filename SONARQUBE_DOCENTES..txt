@@ -1,0 +1,19 @@
+*IMPLEMENTACION DE SONRQUBE PARA MS.DOCENTES
+1. LEVANTAR CONTENEDOR DE SONAR
+2. EN LOCALHOST:9000 INGRESA A LA OPCION DE MANUALLY
+3. EN PROJECTDISPLAYNAME Y PROJECT KEY SE PUSO: docentesNet / EN MAIN BRANCH NAME DEJALOR EN main y finalmente click en Set Up
+4. AHORA INGRESAR NUEVAMENTE A LA OPCION DE MANUALLY Y DAR CLICK EN GENERATE
+5. GUARDA EL TOKEN, PORQUE YA NO LO PODRAS VER / sqp_b679eac1122e4bf4278e5cd945f8222acf7ecb8d
+6. AHORA DAR CLICK EN continue
+7. en el Proyecto, afuera de src creo la carpeta test
+8. en la ruta de repositorios/netcloud/ms.docentes -> ejecutar 
+dotnet new xunit -o .\test\Docentes.Domain.Test
+dotnet new xunit -o .\test\Docentes.Application.Test
+dotnet sln add .\test\Docentes.Application.Test\Docentes.Application.Test.csproj
+dotnet sln add .\test\Docentes.Domain.Test\Docentes.Domain.Test.csproj
+dotnet add .\test\Docentes.Domain.Test\Docentes.Domain.Test.csproj reference .\src\Docentes\Docentes.Domain\Docentes.Domain.csproj
+dotnet add .\test\Docentes.Application.Test\Docentes.Application.Test.csproj reference .\src\Docentes\Docentes.Application\Docentes.Application.csproj
+9. en la ruta de repositorios/netcloud/ms.docentes/test/docentes.domain.test/ -> ejecutar: dotnet add package FluentAssertions
+10. en test/Docentes-Domain.Test/ResultsTest.cs/Docentes.cs, agregar el codigo
+11. en la carpeta test dar click derecho y seleccionar run test with coverage
+12. en la ruta de repositorios/netcloud/ms.docentes/test/docentes.application.test -> ejecutar dotnet add package Moq y dotnet add package FluentAssertions
